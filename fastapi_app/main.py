@@ -9,8 +9,11 @@ from fastapi_app.routers import monitoring_plan_patients, monitoring_plan_metric
 from sqladmin import Admin, ModelView
 from fastapi_app.models import Patient
 from fastapi_app.database import engine
+
+
 app = FastAPI()
 setup_admin(app)
+
 @app.get("/")
 def read_root():
     return {"message": "API is working"}
